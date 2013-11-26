@@ -50,7 +50,7 @@ class MarkovChain(object):
         self.order = order
         # A dictionary relating a word or phrase to the words 
         # that follow it
-        self.corpus = {}
+        self.db = {}
         # A set of starting phrases 
         self.starts = set()
         if corpusfile:
