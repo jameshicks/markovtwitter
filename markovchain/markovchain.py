@@ -138,13 +138,14 @@ class MarkovChain(object):
     def load_db(self, filename):
         """ Loads a saved database """
         with open(filename) as inf:
-            order, db = pickle.load(inf) 
+            order, starts, db = pickle.load(inf) 
             self.order = order
+            self.starts = starts
             self.db = db
 
     def save_db(self, filename):
         """ Reads a saved database """
-        data = (self.order, self.db)
+        data = (self.order, self.starts, self.db)
         with open(filename, 'w') as outf:
             pickle.dump(data,outf)
 
