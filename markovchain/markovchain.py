@@ -54,7 +54,7 @@ class MarkovChain(object):
         # A set of starting phrases 
         self.starts = set()
         if corpusfile:
-            self.make_corpus(corpusfile)
+            self.make_db(corpusfile)
         if saveddb:
             self.load_db(saveddb)
 
